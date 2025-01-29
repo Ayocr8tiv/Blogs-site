@@ -19,7 +19,9 @@ const Footer = () => {
                 <li>
                     <Link to= "create">Add Blog</Link>
                 </li>
-                <li>Insights</li>
+                <li>
+                    <Link to='register'>Register Acct</Link>
+                </li>
                 <li>Commerces</li>
             </ul>
         </div>

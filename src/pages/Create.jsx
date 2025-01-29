@@ -6,17 +6,46 @@ const Create = () => {
   const [author, setAuthor] = useState('');
   const [image, setImage] = useState(undefined);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log({title, content, image, author});
+  const [isLoading, setIsLoading] = useState (false)
 
-    setTitle('');
-    setContent('');
-    setAuthor('');
-    setImage(null);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Add your form submission logic here
+  //   console.log({title, content, image, author});
+
+  //   setTitle('');
+  //   setContent('');
+  //   setAuthor('');
+  //   setImage(null);
     
-  };
+  // };
+
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      const blog = {title,content, author}
+
+      try {
+        const response = await fetch("http://localhost:8000/blogs",{
+          method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body:JSON.stringify(blog)
+
+            })
+            if (!response.ok) {
+                throw new Error("failed to submit blog")
+                
+            }
+            setTitle("")
+            setContent("")
+            setAuthor("")
+            alert("blog submitted successfully")
+      } catch (error) {
+        console.log(error);
+        
+      }
+  }
 
   return (
     <main className="bg-gray-100 flex items-center min-h-screen flex-col">

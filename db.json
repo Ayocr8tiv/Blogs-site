@@ -1,0 +1,46 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "My first blog",
+      "content": "This is the content of my first blog",
+      "author": "Ayokunle"
+    },
+    
+    {
+      "id": "b48c",
+      "title": "Mr",
+      "content": "My second blog",
+      "author": "Olakitan"
+    },
+
+    {
+      "id": "d15d",
+      "title": "Emi lokan",
+      "content": "Mr. president",
+      "author": "Damola"
+    }
+  ],
+
+  "users": [
+    {
+      "id": "2",
+      "fullname": "Oloidi Ayokunle",
+      "email": "ayocre8tiv@gmail.com",
+      "phone number": "8108982434",
+      "address": "Alagomeji mainland, lagos",
+      "age": "10",
+      "password": "ayak@4326"
+    },
+
+    {
+      "id": "5866",
+      "fullName": "Ayokunle",
+      "email": "Ayocre8tiv@gmail.com",
+      "number": "999900999",
+      "address": "Yaba, mainland Lagos",
+      "age": "12",
+      "password": "44546464"
+    }
+  ]
+}
